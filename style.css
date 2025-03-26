@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+    margin-top: 10vh;
+    background-image: url(/Img/240_F_409812204_DB79pC30Mid4zQgUwEFOMbniRhzUUk2X.jpg);
+    height: 600px;
+    width: 1200px;
+}
+.rounded{
+    height: 150px;
+    width: 150px;
+    border-radius: 50% !important;
+    margin-top: 60px;
+    margin-left: 200px;
+}
+.up{
+    margin-top: -545px;
+    margin-left: 325px;
+}
+#formNum{
+    width: 100%;
+    text-align: right;
+    margin-top: 7px;
+    color: gray;
+    font-size: 12px;
+}
+.same{
+    display: flex;
+}
+#top{
+    margin-top: 10vh;
+}
+.size{
+    font-size: 14px;
+    margin-top: -50px;
+}
+.ul{
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+}
+.li{
+    padding: 1px;
+}
+.fa-star{
+    color: orange;
+}
+.rat{
+    color: #527185;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.box{
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 119px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px;
+}
+.ul1{
+    list-style: none;
+    display: flex
+}
+.li1{
+    font-size: 15px
+}
+.chg{
+    color: red;
+}
+.siz{
+    font-size: 25px !important;
+}
+.mrp{
+     font-size: 12px;
+}
+.dif{
+    margin-left: 11px;
+    color: #527185;
+}
+.share{
+    font-size: 20px;
+    margin-left: 500px;
+    padding: 10px;
+    cursor: pointer;
+}
+.bor{
+    border: 1px solid gray;
+    width: 200px;
+    height: 460px;
+    margin-left: 12px;
+    border-radius: 5px;
+}
+.ul2{
+    list-style: none;
+    margin-top: 20px;
+}
+.li2{
+    font-size: 13px;
+    width: 189px;
+    margin-left: -28px;
+}
+.ul3{
+    list-style: none;
+    margin-top: 20px;
+}
+.li3{
+    font-size: 11px;
+    width: 194px;
+    margin-left: -31px;
+}
+.ul4{
+    list-style: none;
+    margin-top: -50px;
+    margin-left: 34px;
+}
+.li4{
+    font-size: 11px;
+    width: 194px;
+    margin-left: -31px;
+}
+.btn-warning {
+    color: #000;
+    background-color: #ffca2c;
+    border-color: #ffc720;
+    width: 175px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+.add{
+    border: 1px solid;
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ult{
+    list-style: none;
+}
+.lit{
+    font-size: 20px;
+    padding: 5px;
+}
+.ulty{
+    list-style: none;
+}
+.lity{
+    font-size: 20px;
+    padding: 5px;
+}
+.box2{
+    border: 1px solid;
+    background-color: whitesmoke;
+    height: 400px;
+    margin-top: 50px;
+    padding: 30px;
+    width: 790px;
+}
+.fa-circle-check{
+    color: green;
+    font-size: 20px;
+}
+.go{
+    text-decoration: none;
+    color: black;
+}
+.btn2{
+    background-color: gainsboro;
+    width: 100px;
+    margin-left: 80px;
+    border: 0px;
+    border-radius: 5px;
+}
+.prtimg {
+    width: 500px;
+    cursor: pointer;
+}
+.cycle{
+    height: 540px;
+    margin-top: 30px;
+    margin-left: 71px;
+    width: 370px;
+}
+
+
+
+@media screen and (min-width:375px) and (max-width:667px) {
+    .top {
+        margin-top: 0;
+        background-image: url(/Img/acbrccq5yGLhQUX2fNj7kU-1280-80.jpg.webp);
+        height: 800px;
+        width: 375px;
+    }
+    .rounded {
+        height: 90px;
+        width: 87px;
+        border-radius: 50% !important;
+        margin-top: 60px;
+        margin-left: 19px;
+        margin-bottom: 168px;
+    }
+    .prtimg {
+        width: 350px !important;
+        cursor: pointer;
+    }
+    .share {
+        font-size: 15px;
+        margin-left: 315px;
+        padding: 0px;
+        cursor: pointer;
+    }
+    .bor {
+        border: 1px solid gray;
+        width: 200px;
+        height: 460px;
+        /* margin-left: 12px; */
+        border-radius: 5px;
+        margin-left: 80px;
+    }
+    #top {
+        margin-top: 5vh;
+    }
+    .box2 {
+        border: 1px solid;
+        background-color: whitesmoke;
+        height: 370px;
+        margin-top: 30px;
+        padding: 30px;
+        width: 340px;
+    }
+    .lit {
+        font-size: 15px;
+        padding: 3px;
+    }
+    .lity {
+        font-size: 15px;
+        margin-left: -30px;
+    }
+    .cs{
+        color: #0d6efd;
+        text-decoration: underline;
+        margin-left: -25px;
+        font-size: 12px;
+    }
+    .thsimg{
+    width: 99px;
+    margin-left: 185px;
+    margin-top: -135px;
+}
+}

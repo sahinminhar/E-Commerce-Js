@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Img/cyclist-30729.png" type="image/x-icon">
+    <title>Product</title>
+  </head>
+  <body>
+    <section>
+        <div class="container top">
+            <div>
+                <img src="/Img/71+706rv6+L._SX679_.jpg" class="cycle" alt="No Image">
+            </div>
+            <div class="up">
+                <div class="mb-3 mx-auto" style="width: 300px;">
+                    <label for="FormInput1" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="FormInput1" placeholder="Enter the product name">
+                    <span style="display: none; font-size: 13px; width: 1000px;" id="namerror1">Please provide a valid product name</span>
+                    <span style="display: none; font-size: 13px; width: 1000px;" id="namerror2">Name must be at least 3 characters</span>
+                </div>
+                <div class="mb-3 mx-auto" style="width: 300px;">
+                    <label for="FormInput2" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="FormInput2" placeholder="Enter the price">
+                </div>
+                <div class="mb-3 mx-auto" style="width: 300px;">
+                    <label for="FormTextarea1" class="form-label">Descripton</label>
+                    <textarea class="form-control" id="FormTextarea1" rows="3" placeholder="Descripton"></textarea>
+                    <div class="same">
+                        <span style="display: none" id="deserror1">Please provide a product description</span>
+                        <span style="display: none; color:red; font-size: 13px; width: 1000px;" id="deserror">Description must be 255 characters max</span>
+                    <p id="formNum"></p>
+                    </div>
+                </div>
+                <div class="mb-3 mx-auto" style="width: 300px;">
+                    <label for="Formselect1" class="form-label">Discount</label>
+                    <select class="form-select" aria-label="Default select example" id="Formselect1" onchange="updatePrice();">
+                    <option selected value="0">Select Discount</option>
+                    <option value="50">50%</option>
+                    </select>
+                    <span style="color: gray;" id="opt">Optional</span>
+                    <span style="display: none; font-size: 13px; width: 1000px;" id="diserror">Please select a discount option</span>
+                </div>  
+                <div class="mb-3 mx-auto" style="width: 300px; display: none;" id="discountContainer">
+                    <label for="DiscountedPrice" class="form-label">Discounted Price</label>
+                    <input type="text" class="form-control" id="DiscountedPrice" readonly>
+                </div>  
+                <div class="mb-3 mx-auto" style="width:260px; display: flex;">
+                    <button type="button" class="btn btn-primary" onclick="Validatesumbitform()"><a href="/productview.html" class="go"><a href="/productview.html" class="go">Submit</a></a></button>
+                    <!-- <button type="button" class="btn2"><a href="/productview.html" class="go">Go to Cart</a></button> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+  </body>
+  <script>
+    function Validatesumbitform() {
+        var name = document.getElementById('FormInput1').value.trim();
+        if (name){
+            let namelen = name.length;
+            if (namelen < 3){
+            document.getElementById('namerror2').style = "display:block;color:red"
+            document.getElementById('FormInput1').style = "border:2px solid red"
+            } else {
+            document.getElementById('namerror2').style = "display:none"
+            document.getElementById('FormInput1').style = "none"
+            }
+            document.getElementById('namerror1').style = "display:none"
+            
+        } else {
+            document.getElementById('FormInput1').style = "border:2px solid red"
+            document.getElementById('namerror1').style = "display:block;color:red"
+            document.getElementById('namerror2').style = "display:none"
+        }
+    console.log('Name:',name);
+    console.log('Name:',name.length);
+    
+        var price = document.getElementById('FormInput2').value.trim();
+        if (price){
+            document.getElementById('FormInput2').style = "none"
+            document.getElementById('pricerror').style = "display:none"
+            
+        } else {
+            document.getElementById('FormInput2').style = "border:2px solid red"
+            document.getElementById('pricerror').style = "display:block;color:red"
+        }
+    console.log('Price:',price);
+    console.log('Price:',price.length);
+        var des = document.getElementById('FormTextarea1').value.trim();
+        if (des){
+            document.getElementById('FormTextarea1').style = "none"
+            document.getElementById('deserror1').style = "display:none"
+            
+        } else {
+            document.getElementById('FormTextarea1').style = "border:2px solid red"
+            document.getElementById('deserror1').style = "display:block;color:red;font-size:14px;width:1000px"
+        }
+    console.log('Descreption:',des);
+    console.log('Descreption:',des.length);  
+        var dis = document.getElementById('Formselect1').value.trim();
+        if (dis){
+            document.getElementById('Formselect1').style = "none"
+            document.getElementById('diserror').style = "display:none"
+            
+        } else {
+            document.getElementById('Formselect1').style = "border:2px solid red"
+            document.getElementById('diserror').style = "display:block;color:red"
+        }
+    }
+    var des = document.getElementById("FormTextarea1");
+    var result = document.getElementById("formNum");
+    var deserror = document.getElementById("deserror");
+    var limit = 255;
+    result.textContent = 0 + "/" + limit;
+
+    des.addEventListener("input",function () {
+        var textLength = des.value.length;
+        result.textContent = textLength + "/" + limit;
+        if(textLength > limit){
+            des.style.borderColor = "none"
+            result.style.color = "red"
+            deserror.style.display = "block"
+        } else{
+            des.style.borderColor = "none"
+            result.style.color = "white"
+            deserror.style.display = "none"
+        }
+    });
+
+    function updatePrice() {
+        const priceInput = document.getElementById("FormInput2").value; 
+        const discountSelect = document.getElementById("Formselect1").value;
+        const discountContainer = document.getElementById("discountContainer");
+        const discountedPriceField = document.getElementById("DiscountedPrice");
+
+        if (discountSelect == 50 && priceInput > 0) { 
+            const discountedPrice = priceInput / 2;
+            discountedPriceField.value = "₹" + discountedPrice.toFixed(2);
+            discountContainer.style.display = "block";
+        } else {
+            discountContainer.style.display = "none";
+        }
+    }
+
+  </script>
+</html>
